@@ -50,7 +50,7 @@ object Main extends TwitterServer {
     }
   }
 
-  val DropboxAccessToken: Flag[String] = flag("dropbox.access-token", "", 
+  val DropboxAccessToken: Flag[String] = flag("dropbox.accessToken", "", 
     "Access Token for the Dropbox Api")
   val DropboxFolder: Flag[String] = flag("dropbox.folder", "/", "Dropbox Folder")
   private val port: Flag[Int] = flag("port", 8081, "TCP port for HTTP server")
