@@ -52,10 +52,14 @@ resolvers ++= {
 
 resolvers += Resolver.sonatypeRepo("snapshots")
 
-lazy val dropboxFolder = sys.props.getOrElse("dropbox.folder", default = "/")
+lazy val dropboxFolder      = sys.props.getOrElse("dropbox.folder", default = "/")
+lazy val dropboxAccessToken = sys.props.getOrElse("dropbox.access_token", default = "")
+lazy val port               = sys.props.getOrElse("port", default = 8081)
 
 javaOptions in Universal ++= Seq(
-  s"-dropbox.folder=$dropboxFolder"
+  s"-dropbox.folder=$dropboxFolder",
+  s"-dropbox.access_token=$dropboxAccessToken",
+  s"-port=$port"
 )
 
 lazy val root = (project in file(".")).
