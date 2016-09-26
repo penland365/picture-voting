@@ -20,10 +20,10 @@ object Main extends TwitterServer {
   def main(): Unit = {
     ensureFolderExistence()
 
-    log.info("Serving Picture Voting Application")
     val server = Http.server
       .withStatsReceiver(statsReceiver)
       .serve(s":${port()}", Api)
+    log.info(s"Serving Picture Voting at port ${port()}")
 
     onExit { server.close(); () }
     Await.ready(adminHttpServer)
