@@ -1,3 +1,5 @@
+enablePlugins(JavaAppPackaging)
+
 val buildName = "picture-voting"
 
 name := buildName
@@ -47,7 +49,14 @@ resolvers ++= {
     "Twitter Maven repo" at "http://maven.twttr.com/"
   )
 }
+
 resolvers += Resolver.sonatypeRepo("snapshots")
+
+lazy val dropboxFolder = sys.props.getOrElse("dropbox.folder", default = "/")
+
+javaOptions in Universal ++= Seq(
+  s"-dropbox.folder=$dropboxFolder"
+)
 
 lazy val root = (project in file(".")).
   settings(

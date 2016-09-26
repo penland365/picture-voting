@@ -1,6 +1,6 @@
 {      
   "type": "inboundText", 
-  "payload": "IMG_0.jpeg", 
+  "payload": "IMG_1.jpeg", 
   "fromNumber": "+12222222222", 
   "toNumber": "+13333333333",
   "userId": "{burner user id}",

@@ -1,6 +1,6 @@
 {      
-  "type": "inboundText", 
-  "payload": "IMG_0.jpeg", 
+  "type": "inboundMedia", 
+  "payload": "https://s3.amazonaws.com/burner-mms/prod/a1551db5-d8a5-430b-a336-5513b5a37a38.jpeg", 
   "fromNumber": "+12222222222", 
   "toNumber": "+13333333333",
   "userId": "{burner user id}",
