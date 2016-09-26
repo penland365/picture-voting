@@ -1,0 +1,8 @@
+{      
+  "type": "inboundText", 
+  "payload": "Are you there?", 
+  "fromNumber": "+12222222222", 
+  "toNumber": "+13333333333",
+  "userId": "{burner user id}",
+  "burnerId": "{burner id}"
+}
