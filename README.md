@@ -43,3 +43,13 @@ The `POST /event` endpoint works as request.
 ### Admin interface
 Using Twitter server gives you an admin Http endpoint for free. To view it, just point your browser at `/admin`, or hit the endpoint
 via curl `curl -v -X GET http://wherever/admin/metrics.json`
+
+### Testing
+Given time constraints, I tested the concurrent code from an endpoint perpspective to display my testing style. These tests
+walk through most of the stack outside the Dropbox rest client.
+Under normal conditions, I would write a multitude of additional tests for the following
+1. Json Encoding / Decoding
+2. RESTFul client w/ mocking
+3. RESTFul client w/ integration
+4. Testing of Filename extension parsing
+5. A state machine for voting
