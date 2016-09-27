@@ -29,6 +29,12 @@ scalacOptions := Seq(
 
 lazy val finchVersion = "0.11.0-M3"
 
+lazy val testDependencies = Seq(
+  "org.scalactic" %% "scalactic" % "2.2.6",
+  "org.scalacheck" %% "scalacheck" % "1.12.5",
+  "com.github.finagle" %% "finch-test" % finchVersion
+)
+
 lazy val finagleVersion = "6.38.0"
 
 lazy val circeVersion = "0.5.2"
@@ -64,5 +70,6 @@ javaOptions in Universal ++= Seq(
 
 lazy val root = (project in file(".")).
   settings(
+    libraryDependencies ++= testDependencies.map(_ % "test"),
     name := buildName
 )

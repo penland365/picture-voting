@@ -34,4 +34,6 @@ object util {
 
   private[this] var counter: Int = 0;
   private[this] val voteMap = new ConcurrentHashMap[String, Int]().asScala
+
+  private[pv] def resetVotes(): Unit = voteMap.clear() // exposed for testing
 }
